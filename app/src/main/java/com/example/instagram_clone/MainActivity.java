@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText edtName,edtPspeed,edtPpower,edtkSpeed,edtkPower;
     private TextView txtGetData;
-    private Button getAllData;
+    private Button getAllData, btnTransition;
     private String allKickBoxers;
 
     @Override
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         edtkPower=findViewById(R.id.edtKickPower);
         txtGetData = findViewById(R.id.txtGetData);
         getAllData = findViewById(R.id.btnGetAllData);
-
+        btnTransition=findViewById(R.id.btnNextAcvitiy);
 
         txtGetData.setOnClickListener(new View.OnClickListener(){
 
@@ -61,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 allKickBoxers="";
                 ParseQuery<ParseObject> queryAll = ParseQuery.getQuery("Kickboxer");
+                //queryAll.whereGreaterThan("punchPower",1000);
+                queryAll.whereGreaterThanOrEqualTo("punchPower",3000);
+                //queryAll.setLimit(1);
                 queryAll.findInBackground(new FindCallback<ParseObject>() {
                     @Override
                     public void done(List<ParseObject> objects, ParseException e) {
@@ -79,6 +82,12 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        });
+        btnTransition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
 

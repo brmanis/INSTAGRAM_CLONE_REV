@@ -4,92 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_red_light"
-    android:onClick="rootTapped">
+    android:background="@android:color/holo_purple"
+    android:onClick="rootLoginTapped"
+    tools:context=".LoginActivity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="78dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/imageView2"
+        android:layout_width="233dp"
+        android:layout_height="211dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/instagram" />
 
     <EditText
-        android:id="@+id/edtEmail"
+        android:id="@+id/edtLoginUname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:ems="10"
-        android:hint="Please enter your email..."
-        android:inputType="textPersonName"
-        android:textColorHint="#FFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <EditText
-        android:id="@+id/edtUsername"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="24dp"
         android:ems="10"
         android:hint="Please enter your username..."
         android:inputType="textPersonName"
         android:textColorHint="#FFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/edtPassword"
+        android:id="@+id/edtLoginPWord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="24dp"
         android:ems="10"
         android:hint="Please enter your password..."
         android:inputType="textPersonName"
         android:textColorHint="#FFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/edtLoginUname" />
+
+    <Button
+        android:id="@+id/btnLoginIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="LOG IN"
+        android:textColor="#FFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtLoginPWord" />
 
     <Button
         android:id="@+id/btnSignUpIn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:background="#0000FF"
+        android:layout_marginEnd="32dp"
+        android:background="@android:color/holo_orange_light"
         android:text="SIGN UP"
         android:textColor="#FFF"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:background="#00FF00"
-        android:text="LOG IN"
-        android:textColor="#FFF"
-        android:textColorHint="#fff"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignUpIn" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginIn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
